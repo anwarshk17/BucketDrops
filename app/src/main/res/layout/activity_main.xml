@@ -5,15 +5,22 @@
     android:layout_height="match_parent"
     tools:context="ceberus.anwar.bucketdrops.ActivityMain">
 
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
-    <ImageView
-        android:id="@+id/iv_background"
-        android:layout_below="@+id/toolbar"
+    <ceberus.anwar.bucketdrops.widgets.BucketRecyclerView
+        android:id="@+id/rv_drops"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
 
-    <include layout="@layout/empty_drops"/>
+    <include
+        android:id="@+id/empty_drop"
+        layout="@layout/empty_drops" />
 </RelativeLayout>
